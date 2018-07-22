@@ -8,3 +8,6 @@
 *.rel
 *.rst
 *.sym
+__pycache__
+/stellarisTty0
+
