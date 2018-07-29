@@ -9,5 +9,5 @@
 *.rst
 *.sym
 __pycache__
-/stellarisTty0
+/motors/stellarisTty0
 

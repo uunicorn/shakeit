@@ -1,12 +1,12 @@
 OBJECTS    = main.rel
 LDFLAGS    = -mstm8 -lstm8 --code-loc 0x8000 --data-loc 0
 #LDFLAGS    = -mstm8 -lstm8 --code-loc 0x0000 --data-loc 933
-CFLAGS     = -mstm8 -I. -DSTM8S003 -DF_CPU=16000000 --std-c99 
+CFLAGS     = -mstm8 -I.. -DSTM8S003 -DF_CPU=16000000 --std-c99 
 
 all: shakeit.bin
 
 clean:
-	rm -rf $(OBJECTS) shakeit.ihx shakeit.bin
+	rm -rf $(OBJECTS) shakeit.ihx shakeit.bin *.lst *.rst *.sym *.asm *.lk *.map *.cdb __pycache__
 
 shakeit.ihx: $(OBJECTS)
 	sdcc $(OBJECTS) -o $@ $(LDFLAGS)
